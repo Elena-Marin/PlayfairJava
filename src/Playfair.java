@@ -88,15 +88,15 @@ public class Playfair {
     public static String prepareEncryptionKey(String encryptionKey){
 
         String inputEncryptionKey = formatText(encryptionKey);
-        StringBuilder outputEncyptionKey = new StringBuilder();
+        StringBuilder outputEncryptionKey = new StringBuilder();
 
         for(int i = 0; i < inputEncryptionKey.length(); i++){
-            if(!outputEncyptionKey.toString().contains(String.valueOf(inputEncryptionKey.charAt(i)))) {
-                outputEncyptionKey.append(inputEncryptionKey.charAt(i));
+            if(!outputEncryptionKey.toString().contains(String.valueOf(inputEncryptionKey.charAt(i)))) {
+                outputEncryptionKey.append(inputEncryptionKey.charAt(i));
            }
         }
 
-        return outputEncyptionKey.toString();
+        return outputEncryptionKey.toString();
     }
 
     //Using the preparedEncryptionKey - prepare the encryption matrix
