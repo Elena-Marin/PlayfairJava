@@ -31,7 +31,19 @@ public class Playfair {
         System.out.println(encryptedText);
         System.out.println("Encrypted message: " + arraylistToString(encryptedText));
 
-        ArrayList<String> decryptedText = encryptDecrypt("d", encryptedText);
+        System.out.print("Enter text to be decrypted: ");
+        String textForDecryption = console.nextLine();
+        ArrayList<String> textPreparedForDecryption = prepareText(textForDecryption);
+
+        System.out.println("Enter decryption key: ");
+        String decryptionKey = console.nextLine();
+
+        String decryptionKeyPrepared = prepareEncryptionKey(decryptionKey + alphabet);
+        System.out.println("Formatted text for decryption key: " + decryptionKeyPrepared);
+
+        keyMatrix = tableMatrix(decryptionKeyPrepared);
+
+        ArrayList<String> decryptedText = encryptDecrypt("d", textPreparedForDecryption);
         System.out.println(prepareDecryptedText(decryptedText));
         System.out.println("Decrypted message: " + arraylistToString(prepareDecryptedText(decryptedText)));
     }
