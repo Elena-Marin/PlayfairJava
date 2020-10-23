@@ -10,6 +10,7 @@ public class Playfair {
         Scanner console = new Scanner(System.in);
         String alphabet = "ABCDEFGHIKLMNOPQRSTUVWXYZ";
 
+        // Encryption --------------------------------------------------
         System.out.print("Enter text to be encrypted: ");
         String textForEncryption = console.nextLine();
 
@@ -30,6 +31,8 @@ public class Playfair {
         ArrayList<String> encryptedText = encryptDecrypt("e", textPrepared);
         System.out.println(encryptedText);
         System.out.println("Encrypted message: " + arraylistToString(encryptedText));
+
+        // Decryption --------------------------------------------------
 
         System.out.print("Enter text to be decrypted: ");
         String textForDecryption = console.nextLine();
